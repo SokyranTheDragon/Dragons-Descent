@@ -31,8 +31,11 @@
           <!-- <li Class="ThinkNode_Subtree" MayRequire="Ludeon.RimWorld.Biotech">
             <treeDef>DD_Abilities_Escape</treeDef>
           </li> -->
-        <!-- React to close melee threat -->
-        <li Class="JobGiver_ReactToCloseMeleeThreat" />
+       <!-- React to close melee threat -->
+       <li Class="JobGiver_ReactToCloseMeleeThreat" />
+
+       <!-- Do a queued job -->
+       <li Class="ThinkNode_QueuedJob" />
 		
 		<!-- Leave if timed out (And isn't already leaving) -->
 		<li Class="DD.ThinkNode_ConditionalExitTimedOutOnce">
@@ -45,8 +48,6 @@
 		  </subNodes>
 		</li>
 
-        <!-- Do a queued job -->
-        <li Class="ThinkNode_QueuedJob" />
 
         <!-- Wild animals dig out if no path to map edge and starving -->
         <li Class="ThinkNode_ConditionalHasFaction">
@@ -81,7 +82,7 @@
           </subNodes>
         </li>
 		
-		<li Class="ThinkNode_ConditionalMentalStateClass">
+		<!-- <li Class="ThinkNode_ConditionalMentalStateClass">
           <stateClass>MentalState_Manhunter</stateClass>
           <subNodes>
             <li Class="ThinkNode_Priority">
@@ -93,12 +94,12 @@
                     </li>
                   </subNodes>
                 </li>
-                <!-- <li Class="JobGiver_Manhunter" /> -->
+                <li Class="JobGiver_Manhunter" />
                 <li Class="DD.JobGiver_Manhunter_AnyVerb" />
               </subNodes>
             </li>
           </subNodes>
-        </li>
+        </li> -->
 
         <!-- Mental state non critical -->
         <li Class="ThinkNode_Subtree">

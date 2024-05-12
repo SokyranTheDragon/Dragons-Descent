@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- <KCSG.StructureLayoutDef>
+  <KCSG.StructureLayoutDef>
     <defName>Dragon_Lair_Gold_2</defName>
     <isStorage>true</isStorage>
     <layouts>
@@ -306,10 +306,10 @@
   <spawnRotten>false</spawnRotten>
   <spawnFilthAround>false</spawnFilthAround>
   <defendSpawnPoint>true</defendSpawnPoint>
-</KCSG.SymbolDef> -->
+</KCSG.SymbolDef>
 
 
-<!-- <KCSG.SymbolDef>
+<KCSG.SymbolDef>
 <defName>ToyBox_Gold</defName>
 <thing>ToyBox</thing>
 <stuff>Gold</stuff>
@@ -319,8 +319,8 @@
 <defName>BabyDecoration_Jade</defName>
 <thing>BabyDecoration</thing>
 <stuff>Jade</stuff>
-</KCSG.SymbolDef> -->
-<!-- 
+</KCSG.SymbolDef>
+
 <KCSG.SymbolDef>
 <defName>EggGoldDragonFertilized</defName>
 <thing>EggGoldDragonFertilized</thing>
@@ -353,13 +353,13 @@
 <KCSG.SymbolDef>
 <defName>DD_Bow_DoubleCrossbow</defName>
 <thing>DD_Bow_DoubleCrossbow</thing>
-</KCSG.SymbolDef> -->
+</KCSG.SymbolDef>
 
-<!-- <KCSG.SymbolDef>
+<KCSG.SymbolDef>
 <defName>Flamebow</defName>
 <thing>Flamebow</thing>
-</KCSG.SymbolDef> -->
-<!-- 
+</KCSG.SymbolDef>
+
 <KCSG.SymbolDef>
 <defName>DragonPillow_Cloth_North</defName>
 <thing>DragonPillow</thing>
@@ -390,5 +390,5 @@
 <defName>Altar_HardScale_North</defName>
 <thing>Altar</thing>
 <stuff>HardScale</stuff>
-</KCSG.SymbolDef> -->
+</KCSG.SymbolDef>
 </Defs>

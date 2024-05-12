@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="MoteBase">
+  <defName>DD_Mote_FirePuff</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <mote>
+    <growthRate>0.53</growthRate>
+    <collide>true</collide>
+    <speedPerTime>-0.32</speedPerTime>
+    <fadeOutTime>.6</fadeOutTime>
+    <solidTime>20</solidTime>
+  </mote>
+  <graphicData>
+    <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+    <shaderType>CutoutAnimated</shaderType>
+    <texPath>Things/Building/Misc/Lightball/Lightball_Overlay</texPath>
+    <shaderParameters>
+      <_NumFrames>4</_NumFrames>
+      <_FramesPerSec>7</_FramesPerSec>
+    </shaderParameters>
+    <drawSize>5</drawSize>
+  </graphicData>
+</ThingDef>
+
+<ThingDef ParentName="MoteBase">
+  <defName>DD_Mote_ExplosionPuff</defName>
+  <altitudeLayer>MoteOverhead</altitudeLayer>
+  <mote>
+    <fadeInTime>0.06</fadeInTime>
+    <solidTime>0.4</solidTime>
+    <fadeOutTime>.6</fadeOutTime>
+    <growthRate>1.03</growthRate>
+  </mote>
+  <graphicData>
+    <texPath>Things/Mote/ShieldBubble_BrokenFlash</texPath>
+    <shaderType>MoteGlow</shaderType>
+    <!-- <texPath>Things/Mote/PowerBeam</texPath> -->
+    <!-- <shaderType>MoteGlow</shaderType> -->
+  </graphicData>
+</ThingDef>
+
+</Defs>

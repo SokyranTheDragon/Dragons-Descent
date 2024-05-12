@@ -81,17 +81,7 @@
           </extraMeleeDamages>
         </surpriseAttack>
       </li>
-      <li>
-        <label>DD_Knockback</label>
-        <capacities>
-          <li>DD_Knockback</li>
-        </capacities>
-        <power>15</power>
-        <armorPenetration>0.9</armorPenetration>
-        <cooldownTime>1.0</cooldownTime>
-        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
-        <chanceFactor>.2</chanceFactor>
-      </li>
+      
     </tools>
     <comps>
 
@@ -661,17 +651,7 @@
           </extraMeleeDamages>
         </surpriseAttack>
       </li>
-      <li>
-        <label>DD_Knockback</label>
-        <capacities>
-          <li>DD_Knockback</li>
-        </capacities>
-        <power>15</power>
-        <armorPenetration>0.9</armorPenetration>
-        <cooldownTime>1.0</cooldownTime>
-        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
-        <chanceFactor>.2</chanceFactor>
-      </li>
+      
     </tools>
     <comps>
       <li Class="DD.CompProperties_CrossbredEggLayer">
@@ -1000,17 +980,7 @@
           </extraMeleeDamages>
         </surpriseAttack>
       </li>
-      <li>
-        <label>DD_Knockback</label>
-        <capacities>
-          <li>DD_Knockback</li>
-        </capacities>
-        <power>15</power>
-        <armorPenetration>0.9</armorPenetration>
-        <cooldownTime>1.0</cooldownTime>
-        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
-        <chanceFactor>.2</chanceFactor>
-      </li>
+      
     </tools>
     <comps>
       <li Class="DD.CompProperties_CrossbredEggLayer">
@@ -1387,17 +1357,7 @@
           </extraMeleeDamages>
         </surpriseAttack>
       </li>
-      <li>
-        <label>DD_Knockback</label>
-        <capacities>
-          <li>DD_Knockback</li>
-        </capacities>
-        <power>15</power>
-        <armorPenetration>0.9</armorPenetration>
-        <cooldownTime>1.0</cooldownTime>
-        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
-        <chanceFactor>.2</chanceFactor>
-      </li>
+      
     </tools>
     <statBases>
       <MoveSpeed>9</MoveSpeed>

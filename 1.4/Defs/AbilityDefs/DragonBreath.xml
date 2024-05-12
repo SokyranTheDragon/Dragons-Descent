@@ -1,46 +1,120 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!-- DragonBreath -->
     <VFECore.Abilities.AbilityDef>
-        <defName>DD_DragonBreath</defName>
+        <defName>DD_DragonSpit</defName>
         <label>Dragon Fire Breath</label>
         <description>Rawr</description>
-        <abilityClass>DD.DD_Ability_ShootProjectile</abilityClass>
+        <targetingParameters>
+          <canTargetSelf>false</canTargetSelf>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetingParameters>
+        <abilityClass>DD.Ability_ShootProjectileExpandable</abilityClass>
         <targetMode>Pawn</targetMode>
         <castTime>15</castTime>
         <range>26</range>
-        <chance>.4</chance>
+        <chance>.3</chance>
         <radius>5</radius>
-        <cooldownTime>90</cooldownTime>
+        <durationTime>50</durationTime>
+        <cooldownTime>150</cooldownTime>
         <iconPath>AnimalProjectile/DragonFire</iconPath>
         <castSound>DragonBreathShot</castSound>
         <showUndrafted>true</showUndrafted>
         <modExtensions>
           <li Class="VFECore.Abilities.AbilityExtension_Projectile">
-             <projectile>Projectile_DragonSpitBlunt</projectile>
+            <!-- <projectile>DD_Projectile_DragonSpitBlunt</projectile> -->
+            <!-- <projectile>DD_Projectile_Flamethrower</projectile>  -->
+            <projectile>DD_Projectile_DragonSpitFlameThrower</projectile> 
+            
+          </li>
+        </modExtensions>
+
+      </VFECore.Abilities.AbilityDef>
+      
+      
+      <VFECore.Abilities.AbilityDef>
+        <defName>DD_DragonLightning</defName>
+        <label>Dragon Fire Breath</label>
+        <description>Rawr</description>
+        <abilityClass>DD.Ability_ShootProjectileExpandable</abilityClass>
+        <targetMode>Pawn</targetMode>
+        <castTime>15</castTime>
+        <range>26</range>
+        <chance>1</chance>
+        <radius>5</radius>
+        <durationTime>100</durationTime>
+        <cooldownTime>250</cooldownTime>
+        <iconPath>AnimalProjectile/LightningC</iconPath>
+        <castSound>DragonBreathShot</castSound>
+        <showUndrafted>true</showUndrafted>
+        <modExtensions>
+          <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+             <projectile>DD_Projectile_DragonLightning</projectile>
           </li>
         </modExtensions>
       </VFECore.Abilities.AbilityDef> 
 
-      <!-- <VFECore.Abilities.AbilityDef>
-        <defName>DD_DragonBreath_AOE</defName>
+  <!-- DragonBreath_Frost -->
+
+      <VFECore.Abilities.AbilityDef>
+        <defName>DD_DragonBreath_Fire</defName>
         <label>Dragon Fire Breath NEW</label>
         <description>Rawr</description>
-        <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+        <!-- <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass> -->
+        <abilityClass>DD.Ability_ShootProjectileExpandable</abilityClass>
         <targetMode>Pawn</targetMode>
-        <castTime>150</castTime>
-        <range>26</range>
+        <targetingParameters>
+          <canTargetSelf>false</canTargetSelf>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetingParameters>
+        <castTime>15</castTime>
+        <durationTime>100</durationTime>
+        <minRange>2</minRange>
+        <range>36</range>
         <chance>1</chance>
         <radius>5</radius>
-        <cooldownTime>10</cooldownTime>
+        <cooldownTime>500</cooldownTime>
         <iconPath>AnimalProjectile/DragonFire</iconPath>
         <castSound>DragonBreathShot</castSound>
         <showUndrafted>true</showUndrafted>
         <modExtensions>
           <li Class="VFECore.Abilities.AbilityExtension_Projectile">
-             <projectile>Projectile_RedDragonBreath_Fire</projectile>
+             <projectile>DD_FireBreathProjectileExpandable</projectile>
           </li>
         </modExtensions>
       </VFECore.Abilities.AbilityDef> 
+
+        <!-- DragonBreath_Frost -->
+
+
+      <VFECore.Abilities.AbilityDef>
+        <defName>DD_DragonBreath_Frost</defName>
+        <label>Dragon Ice Breath</label>
+        <description>Ice Breath</description>
+        <!-- <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass> -->
+        <abilityClass>DD.Ability_ShootProjectileExpandable</abilityClass>
+        <targetingParameters>
+          <canTargetSelf>false</canTargetSelf>
+          <canTargetBuildings>true</canTargetBuildings>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetMechs>true</canTargetMechs>
+        </targetingParameters>
+        <castTime>15</castTime>
+        <durationTime>120</durationTime>
+        <range>40</range>
+        <chance>1</chance>
+        <radius>3</radius>
+        <cooldownTime>250</cooldownTime>
+        <iconPath>AnimalProjectile/Animations/IceDAbilities/Projectile_Ice</iconPath>
+        <!-- <castSound>DragonBreathShot</castSound> -->
+        <showUndrafted>true</showUndrafted>
+        <modExtensions>
+          <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+             <projectile>DD_IceBreathProjectileExpandable</projectile>
+          </li>
+        </modExtensions>
+      </VFECore.Abilities.AbilityDef> 
+
 
       <VFECore.Abilities.AbilityDef>
         <defName>DD_ElectromagneticPulse</defName>
@@ -65,7 +139,7 @@
             <onCaster>true</onCaster>
           </li>
         </modExtensions>
-      </VFECore.Abilities.AbilityDef> -->
+      </VFECore.Abilities.AbilityDef>
 
 
       <!-- <VFECore.Abilities.AbilityDef>

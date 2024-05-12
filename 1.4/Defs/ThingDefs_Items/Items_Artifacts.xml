@@ -21,7 +21,7 @@
     <comps>
 	  <li Class="CompProperties_Targetable">
 		<compClass>CompTargetable_SinglePawn</compClass>
-		<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+		<fleckOnTarget>DD_PsycastAreaEffect</fleckOnTarget>
 		<fleckConnecting>PsycastPsychicLine</fleckConnecting>
 	  </li>
       <li Class="DD.CompProperties_LifespanPercent">
@@ -58,7 +58,7 @@
     <comps>
       <li Class="CompProperties_Targetable">
         <compClass>CompTargetable_SinglePawn</compClass>
-        <moteOnTarget>Mote_PsycastPsychicEffect</moteOnTarget>
+        <moteOnTarget>Mote_DD_PsycastAreaEffect</moteOnTarget>
         <moteConnecting>Mote_PsycastPsychicLine</moteConnecting>
       </li>
       <li Class="DD.CompProperties_Range">
@@ -92,9 +92,11 @@
 		</statBases>
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
+      <li>
+      </li>
 			<li Class="CompProperties_Targetable">
 				<compClass>DD.CompTargetable_MatingTarget</compClass>
-				<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+				<fleckOnTarget>DD_PsycastAreaEffect</fleckOnTarget>
 				<fleckConnecting>PsycastPsychicLine</fleckConnecting>
 			</li>
 			<li Class="DD.CompProperties_SpawnMate">
@@ -102,7 +104,7 @@
 				<targetHediff>false</targetHediff>
 				<mateHediff>true</mateHediff>
 				<spawnTamed>false</spawnTamed>
-				<spawnedAgeRange>100~750</spawnedAgeRange>
+				<spawnedAgeRange>100~550</spawnedAgeRange>
 				<penaltyMentalDef>Manhunter</penaltyMentalDef>
 				<penaltyReason>The dragon has been driven mad by the roars.</penaltyReason>
 				<targetPenalty>true</targetPenalty>

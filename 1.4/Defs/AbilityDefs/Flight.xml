@@ -8,6 +8,7 @@
 		<iconPath>UserInterface/Abilities/Fly</iconPath>
         <abilityClass>DD.Ability_Base</abilityClass>
         <cooldownTicksRange>1800~5200</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <verbProperties>
@@ -17,7 +18,7 @@
 			<drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
 			<warmupTime>1</warmupTime>
 			<targetParams>
-				<canTargetPawns>false</canTargetPawns>
+				<canTargetPawns>true</canTargetPawns>
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
         </verbProperties>
@@ -33,7 +34,7 @@
 			<li Class="DD.AbilityCompProperties_RequireBodyPart">
 				<compClass>DD.AbilityComp_RequireBodyPart</compClass>
 				<missing>true</missing>
-				<bodyPart>Eye</bodyPart>
+				<bodyPart>Wing</bodyPart>
 			</li>
         </comps>
     </AbilityDef>

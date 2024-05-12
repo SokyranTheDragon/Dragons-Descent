@@ -5,8 +5,10 @@
   <ThingDef ParentName="AnimalThingBase" Name="BaseDragon" Abstract="True">
     <race>
       <!-- Overriding animal think tree -->
-      <thinkTreeMain>Dragon</thinkTreeMain>
-      <thinkTreeConstant>DragonConstant</thinkTreeConstant>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <!-- <thinkTreeMain>Dragon</thinkTreeMain> -->
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <!-- <thinkTreeConstant>DragonConstant</thinkTreeConstant> -->
       <!-- <thinkTreeMain>Human</thinkTreeMain>
       <thinkTreeConstant>AnimalConstant</thinkTreeConstant> -->
       <!-- This clears any hediffgivers from its children -->
@@ -37,10 +39,10 @@
         <customThingToDig>Jeweledrhizomeraw</customThingToDig>
         <customAmountToDig>15</customAmountToDig>
         <timeToDig>50000</timeToDig>
-        <spawnForbidden>false</spawnForbidden>
+        <spawnForbidden>true</spawnForbidden>
       </li>
       <!-- HostileResponse settings -->
-      <!-- <li Class="DD.CompProperties_HostileResponse">
+<!--       <li Class="DD.CompProperties_HostileResponse">
         <compClass>DD.CompHostileResponse</compClass>
         <initialHostility>Aggressive</initialHostility>
         <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
@@ -163,11 +165,43 @@
             <gainCondition Class="DD.AbilityAgeCondition">
               <ageRange>30~35</ageRange>
             </gainCondition>
+
+          </li>
+          <!-- <li> 
+            <abilityDef>KO</abilityDef>
+            <growthHediff>DraconicGrowth</growthHediff>
+            <gainCondition Class="DD.AbilityAgeCondition">
+              <ageRange>300~350</ageRange>
+            </gainCondition>
+
+          </li>
+          <li> 
+            <abilityDef>Claw</abilityDef>
+            <growthHediff>DraconicGrowth</growthHediff>
+            <gainCondition Class="DD.AbilityAgeCondition">
+              <ageRange>300~350</ageRange>
+            </gainCondition>
+
+          </li> -->
+          <!-- <li> 
+            <abilityDef>Charge</abilityDef>
+            <growthHediff>DraconicGrowth</growthHediff>
+            <gainCondition Class="DD.AbilityAgeCondition">
+              <ageRange>300~350</ageRange>
+            </gainCondition>
+
+          </li> -->
+          <!-- <li> 
+            <abilityDef>DD_DragonBreath</abilityDef>
+            <growthHediff>DraconicGrowth</growthHediff>
+            <gainCondition Class="DD.AbilityAgeCondition">
+              <ageRange>30~35</ageRange>
+            </gainCondition>
             <loseCondition Class="DD.AbilityBodyPartCondition">
               <missing>true</missing>
-              <bodyPart>Eye</bodyPart>
+              <bodyPart>Wing</bodyPart>
             </loseCondition>
-          </li>
+          </li> -->
           <!-- <li MayRequire="Ludeon.RimWorld.Biotech">
             <abilityDef>DD_Longjump_Dragon</abilityDef>
             <growthHediff>DraconicGrowth</growthHediff>
@@ -254,6 +288,9 @@
 
 
     <modExtensions>
+    <li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+        <ashResistant>Resistant</ashResistant>
+    </li>
       <li Class="DD.SettingControlledExtension_AnimalBiome" />
       <li Class="DD.LegacyModExtension">
         <hasOwnership>true</hasOwnership>
@@ -279,15 +316,6 @@
   <ThingDef ParentName="BaseDragon" Name="DragonRaceBase" Abstract="True">
     <!-- Changed ParentName to BaseDragon -->
     <comps>
-      <!-- <li Class="AnimalBehaviours.CompProperties_InitialHediff">
-        <hediffname>GR_MeleeDodge</hediffname>
-        <hediffseverity>1</hediffseverity>
-      </li> -->
-      <!-- <li Class="CompProperties_Shearable"> -->
-      <!-- <woolDef>HardScale</woolDef> -->
-      <!-- <shearIntervalDays>1</shearIntervalDays> -->
-      <!-- <woolAmount>50</woolAmount> -->
-      <!-- </li> -->
       <li Class="DD.CompProperties_Scaleable">
         <scaleDef>HardScale</scaleDef>
         <minScaleableLifeStage>AnimalAdult</minScaleableLifeStage>
@@ -393,7 +421,7 @@
           <li>(50,30)</li>
           <li>(200,100)</li>
           <li>(700,100)</li>
-          <li>(1000,60</li>
+          <li>(1000,60)</li>
           <li>(1200,40)</li>
           <li>(1500,20)</li>
           <li>(1800,12)</li>
@@ -403,6 +431,7 @@
     </race>
     <tradeTags>
       <li>AnimalExotic</li>
+      <li MayRequire="sindre0830.rimnauts2">AnimalInsectSpace</li>
     </tradeTags>
     <butcherProducts>
       <DragonHorn>1</DragonHorn>
@@ -425,7 +454,7 @@
     <!-- Changed ParentName to BaseDragon -->
 
     <comps>
-      <li Class="AnimalBehaviours.CompProperties_DoesntFlee"></li>
+  
       <li Class="DD.CompProperties_Scaleable">
         <scaleDef>HardScale</scaleDef>
         <minScaleableLifeStage>AnimalAdult</minScaleableLifeStage>
@@ -532,7 +561,7 @@
           <li>(50,30)</li>
           <li>(200,100)</li>
           <li>(700,100)</li>
-          <li>(1000,60</li>
+          <li>(1000,60)</li>
           <li>(1200,40)</li>
           <li>(1500,20)</li>
           <li>(1800,12)</li>
@@ -542,6 +571,7 @@
     </race>
     <tradeTags>
       <li>AnimalExotic</li>
+      <li MayRequire="sindre0830.rimnauts2">AnimalInsectSpace</li>
     </tradeTags>
     <butcherProducts>
       <DragonHorn>1</DragonHorn>
