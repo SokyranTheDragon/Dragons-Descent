@@ -61,7 +61,7 @@
 		<thingClass>Projectile_Explosive</thingClass>
     <projectile>
       <speed>35</speed>
-      <damageDef>Flame</damageDef>
+      <damageDef>DraconicFlame</damageDef>
       <!-- Use default damage from explosion def -->
       <explosionRadius>1.6</explosionRadius>
       <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>

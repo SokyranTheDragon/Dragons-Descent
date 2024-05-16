@@ -139,6 +139,17 @@ namespace DD
                             }
                         }
                     };
+                    yield return new Command_Action()
+                    {
+                        defaultLabel = "Debug: Add Abilities",
+                        action = () =>
+                        {
+                            foreach (Ritual ritual in rituals)
+                            {
+                                ritual.Reset();
+                            }
+                        }
+                    };
                 }
             }
         }

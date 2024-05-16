@@ -16,12 +16,12 @@
         <abilityClass>DD.Ability_ShootProjectile_Multiple_Dragon</abilityClass>
         <!-- <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass> -->
         <targetMode>Pawn</targetMode>
-        <castTime>150</castTime>
+        <castTime>15</castTime>
         <range>26</range>
         <chance>.3</chance>
         <radius>5</radius>
-        <durationTime>50</durationTime>
-        <cooldownTime>170</cooldownTime>
+        <!-- <durationTime>50</durationTime> -->
+        <cooldownTime>100</cooldownTime>
         <iconPath>AnimalProjectile/DragonFire</iconPath>
         <castSound>DragonBreathShot</castSound>
         <showUndrafted>true</showUndrafted>
@@ -51,18 +51,15 @@
         </targetingParameters>
         <castTime>100</castTime>
         <durationTime>200</durationTime>
-        <cooldownTime>450</cooldownTime>
+        <cooldownTime>600</cooldownTime>
         <minRange>2</minRange>
-        <range>36</range>
-        <chance>1</chance>
+        <range>35</range>
+        <chance>.8</chance>
         <radius>5</radius>
         <iconPath>AnimalProjectile/DragonBreath_Fire</iconPath>
         <castSound>DragonBreathShot</castSound>
         <showUndrafted>true</showUndrafted>
         <modExtensions>
-          <!-- <li Class="VFECore.Abilities.AbilityExtension_Projectile">
-            <projectile>DD_Projectile_DragonBreath_Fire</projectile>
-          </li> -->
           <li Class="DD.AbilityExtension_Projectile_Dragon">
             <projectile>DD_Projectile_DragonBreath_Fire</projectile>
          </li>
@@ -73,14 +70,17 @@
         <label>Dragon Jump</label>
         <description>This hybrid can charge into combat, quickly closing the distance between it and its enemies and damaging them.</description>
         <abilityClass>DD.Ability_DragonJump</abilityClass>
-        <targetMode>Location</targetMode>
+        <targetMode>Pawn</targetMode>
         <targetingParameters>
           <canTargetSelf>false</canTargetSelf>
+          <canTargetBuildings>true</canTargetBuildings>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetMechs>true</canTargetMechs>
         </targetingParameters>
         <castTime>120</castTime>
         <power>100</power>
-        <range>25</range>
-        <cooldownTime>250</cooldownTime>
+        <range>30</range>
+        <cooldownTime>1250</cooldownTime>
         <iconPath>UserInterface/Abilities/Fly</iconPath>
       </VFECore.Abilities.AbilityDef>
       <!-- 

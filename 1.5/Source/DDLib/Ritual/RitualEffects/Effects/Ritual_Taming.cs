@@ -11,7 +11,7 @@ namespace DD
 {
 
 
-    public class CompTargetEffect_Taming : CompTargetEffect
+    public class Ritual_CompTargetEffect_Taming : CompTargetEffect
     {
         public override void DoEffectOn(Pawn user, Thing target)
         {

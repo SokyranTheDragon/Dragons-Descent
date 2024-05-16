@@ -86,7 +86,7 @@
 		</verbProperties>
 	  </AbilityDef>  -->
 
-	  <AbilityDef MayRequire="Ludeon.RimWorld.Anomaly">
+	  <!-- <AbilityDef MayRequire="Ludeon.RimWorld.Anomaly">
 		<defName>DD_IncineratorBurner_FireBreath</defName>
 		<label>Fire Breath Incinerator</label>
 		<description>Expend a pressurized bioferrite charge to create a massive cone of flame.</description>
@@ -133,7 +133,7 @@
 				<effecterDef>DD_BurnerUsed_Fire</effecterDef>
 			</li>
 		</comps>
-	</AbilityDef>
+	</AbilityDef> -->
 <!-- 
 	<AbilityDef MayRequire="Ludeon.RimWorld.Anomaly">
 		<defName>DD_IncineratorBurner_NecroBreath</defName>

@@ -39,7 +39,7 @@ namespace DD
                             if (!list.Where(x => x.def == ThingDefOf.Fire).Any())
                             {
                                 CompAttachBase compAttachBase = list[num].TryGetComp<CompAttachBase>();
-                                Fire obj = (Fire)ThingMaker.MakeThing(ThingDefOf.Fire);
+                                DD_Fire obj = (DD_Fire)ThingMaker.MakeThing(ThingDefOf.Fire);
                                 obj.fireSize = 0f;
                                 GenSpawn.Spawn(obj, list[num].Position, list[num].Map, Rot4.North);
                                 if (compAttachBase != null)

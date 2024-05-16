@@ -24,6 +24,7 @@ namespace DD
                 ShootProjectile(target);
             }
         }
+
         protected virtual Projectile ShootProjectile(GlobalTargetInfo target)
         {
             var extension = this.def.GetModExtension<AbilityExtension_Projectile_Dragon>();
@@ -33,7 +34,13 @@ namespace DD
             Projectile projectile = GenSpawn.Spawn(extension.projectile, source, this.pawn.MapHeld) as Projectile;
             if (projectile is AbilityProjectile abilityProjectile)
             {
+
                 abilityProjectile.ability = this;
+                LocalTargetInfo localTargetInfo = new LocalTargetInfo();
+                this.pawn.stances.SetStance(new DD_Stance_Stand(this.GetDurationForPawn(), localTargetInfo, verb));
+                //this.pawn.stances.SetStance(new DD_Stance_Stand(500, localTargetInfo, verb));
+               
+                
             }
             if (projectile?.TryGetComp<CompAbilityProjectile>() is { } compAbilityProjectile)
             {

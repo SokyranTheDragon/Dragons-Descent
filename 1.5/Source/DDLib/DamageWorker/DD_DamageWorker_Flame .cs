@@ -7,47 +7,55 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace DD
-{
+namespace DD;
     public class DD_DamageWorker_Flame : DamageWorker_AddInjury
     {
-        public override DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
+    public override DamageResult Apply(DamageInfo dinfo, Thing victim)
+    {
+        Pawn pawn = victim as Pawn;
+        if (pawn != null && pawn.Faction == Faction.OfPlayer)
         {
-            Pawn pawn = victim as Pawn;
-            if (pawn != null && pawn.Faction == Faction.OfPlayer)
-            {
-                Find.TickManager.slower.SignalForceNormalSpeedShort();
-            }
-            Map map = victim.Map;
-            DamageWorker.DamageResult damageResult = base.Apply(dinfo, victim);
-            if (!damageResult.deflected && !dinfo.InstantPermanentInjury && Rand.Chance(DD_FireUtility.ChanceToAttachFireFromEvent(victim)))
-            {
-                victim.TryAttachFire(Rand.Range(0.15f, 0.25f));
-            }
-            if (victim.Destroyed && map != null && pawn == null)
-            {
-                foreach (IntVec3 c in victim.OccupiedRect())
-                {
-                    FilthMaker.TryMakeFilth(c, map, ThingDefOf.Filth_Ash, 1, FilthSourceFlags.None, true);
-                }
-                Plant plant;
-                if ((plant = (victim as Plant)) != null && plant.LifeStage != PlantLifeStage.Sowing)
-                {
-                    plant.TrySpawnStump(PlantDestructionMode.Flame);
-                }
-            }
+            Find.TickManager.slower.SignalForceNormalSpeedShort();
+        }
+        Map map = victim.Map;
+        DamageResult damageResult = base.Apply(dinfo, victim);
+        if (map == null)
+        {
             return damageResult;
         }
-
-        public override void ExplosionAffectCell(Explosion explosion, IntVec3 c, List<Thing> damagedThings, List<Thing> ignoredThings, bool canThrowMotes)
+        if (!damageResult.deflected && !dinfo.InstantPermanentInjury && Rand.Chance(FireUtility.ChanceToAttachFireFromEvent(victim)))
         {
-            base.ExplosionAffectCell(explosion, c, damagedThings, ignoredThings, canThrowMotes);
-            if (this.def == DD_DamageDefOf.DraconicFlame && Rand.Chance(FireUtility.ChanceToStartFireIn(c, explosion.Map)))
+            if (pawn != null)
             {
-                DD_FireUtility.TryStartFireIn(c, explosion.Map, Rand.Range(0.2f, 0.6f));
+                pawn.TryAttachFire(Rand.Range(0.15f, 0.25f), dinfo.Instigator);
             }
-
         }
-
+        if (victim.Destroyed && pawn == null)
+        {
+            foreach (IntVec3 item in victim.OccupiedRect())
+            {
+                FilthMaker.TryMakeFilth(item, map, ThingDefOf.Filth_Ash);
+            }
+        }
+        return damageResult;
     }
+
+    //public override void ExplosionAffectCell(Explosion explosion, IntVec3 c, List<Thing> damagedThings, List<Thing> ignoredThings, bool canThrowMotes)
+    //{
+    //    base.ExplosionAffectCell(explosion, c, damagedThings, ignoredThings, canThrowMotes);
+    //    if (def == DD_DamageDefOf.DraconicFlame && Rand.Chance(DD_FireUtility.ChanceToStartFireIn(c, explosion.Map)))
+    //    {
+    //        DD_FireUtility.TryStartFireIn(c, explosion.Map, Rand.Range(0.2f, 0.6f), explosion.instigator);
+    //    }
+    //}
+    public override void ExplosionAffectCell(Explosion explosion, IntVec3 c, List<Thing> damagedThings, List<Thing> ignoredThings, bool canThrowMotes)
+    {
+        base.ExplosionAffectCell(explosion, c, damagedThings, ignoredThings, canThrowMotes);
+        if (def == DamageDefOf.Flame && Rand.Chance(FireUtility.ChanceToStartFireIn(c, explosion.Map)))
+        {
+            FireUtility.TryStartFireIn(c, explosion.Map, Rand.Range(0.2f, 0.6f), explosion.instigator);
+        }
+    }
+
 }
+

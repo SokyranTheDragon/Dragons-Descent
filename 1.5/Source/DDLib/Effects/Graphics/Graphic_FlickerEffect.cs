@@ -41,7 +41,7 @@ namespace DD
             int num3 = Mathf.Abs(num2 ^ ((thing?.thingIDNumber ?? 0) * 391)) % subGraphics.Length;
             float num4 = 1f;
             CompFireOverlayBase compFireOverlayBase = null;
-            if (thing is Fire fire)
+            if (thing is DD_Fire fire)
             {
                 num4 = fire.fireSize;
             }

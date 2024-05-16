@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-
+<!-- 
 
 <QuestScriptDef>
   <defName>DD_Dragon_lair_Silver_1</defName>
@@ -350,6 +350,6 @@
       </li>
     </nodes>
   </root>
-</QuestScriptDef>
+</QuestScriptDef> -->
 
 </Defs>

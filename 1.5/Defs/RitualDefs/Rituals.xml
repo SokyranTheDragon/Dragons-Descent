@@ -379,7 +379,42 @@
 		</skyfaller>
 	</ThingDef>
   
-	<!-- <DD.RitualDef>
+
+				
+	<DD.RitualDef>
+		<defName>Ritual_AddAbilitesToAllDragons</defName>
+		<label>Add Abilities</label>
+			<description>Add New abilities to dragons that are missing them.</description>
+				<cost>
+					<points>
+						<li>(0, 0)</li>
+						<!-- <li>(5, 7)</li>
+						<li>(10, 10)</li>
+						<li>(45, 60)</li> -->
+					</points>
+				</cost>
+				<cooldown>
+				<points>
+					<li>(0, 10)</li>
+					<li>(5, 10)</li>
+				</points>
+				</cooldown>
+				<targetingParams>
+					<canTargetPawns>true</canTargetPawns>
+					<canTargetBuildings>false</canTargetBuildings>
+					<ritualTarget>NoTarget</ritualTarget>
+				</targetingParams>
+				<ritualClass>DD.Ritual_AddAbilitesToAllDragons</ritualClass>
+				<iconPath>UserInterface/Icons/DragonsDescentLogo</iconPath>
+				<fleckOnTarget>DD_PsycastAreaEffect</fleckOnTarget>
+				<fleckOnSource>LightningGlow</fleckOnSource>
+				<fleckConnecting>LineEMP</fleckConnecting>
+				<sound>PsychicInsanityLanceCast</sound>
+				<shakeCamera>true</shakeCamera>
+			</DD.RitualDef>
+	
+	
+	<DD.RitualDef>
 		<defName>Ritual_Destroyer</defName>
 		<label>Destroyer</label>
 		<description>Activates the destroyer on a settlement.</description>
@@ -427,6 +462,6 @@
 				</worldObjects>
 			</li>
 		</modExtensions>
-	</DD.RitualDef> -->
+	</DD.RitualDef>
   
 </Defs>

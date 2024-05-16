@@ -50,7 +50,7 @@ namespace DD
 
         public override string InspectStringAddon => effectDef.LabelCap + ": " + Size;
 
-        private float ___CurrentSize => (EffectDef.effectSize.ClampToRange(Size) / EffectDef.effectSize.TrueMax) * Fire.MaxFireSize;
+        private float ___CurrentSize => (EffectDef.effectSize.ClampToRange(Size) / EffectDef.effectSize.TrueMax) * DD_Fire.MaxFireSize;
         public float CurrentSize() => float.IsNaN(___CurrentSize) ? 0 : ___CurrentSize;
 
         protected virtual DamageInfo CreateDamageInfo => new DamageInfo(EffectDef.damageDef, EffectUtils.SizeToDamage(EffectDef, Size), instigator: this);

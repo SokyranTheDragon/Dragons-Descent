@@ -97,8 +97,14 @@
       </li>
     </tools>
     <comps>
-      <li Class="AnimalBehaviours.CompProperties_Draftable">
+            <li Class="AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
+      </li>
+      <li Class="VFECore.CompProperties_ShieldBubble">
+        <compClass>VFECore.Abilities.CompAbilities</compClass>
+        <blockRangedAttack>False</blockRangedAttack>
+        <blockMeleeAttack>False</blockMeleeAttack>
+        <showAlways>True</showAlways>
       </li>
 
       <li Class="DD.CompProperties_CrossbredEggLayer">
@@ -292,7 +298,7 @@
       </li>
       <li Class="VFECore.Abilities.PawnKindAbilityExtension">
         <giveAbilities>
-          <!-- <li>DD_DragonJump</li> -->
+          <li>DD_DragonJump</li>
           <li>DD_DragonBreath_Fire</li>
           <li>DD_DragonSpit_Fire</li>
         </giveAbilities>
@@ -396,8 +402,14 @@
       </li>
     </tools>
     <comps>
-      <li Class="AnimalBehaviours.CompProperties_Draftable">
+            <li Class="AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
+      </li>
+      <li Class="VFECore.CompProperties_ShieldBubble">
+        <compClass>VFECore.Abilities.CompAbilities</compClass>
+        <blockRangedAttack>False</blockRangedAttack>
+        <blockMeleeAttack>False</blockMeleeAttack>
+        <showAlways>True</showAlways>
       </li>
 
       <li Class="DD.CompProperties_CrossbredEggLayer">
@@ -592,7 +604,9 @@
       </li>
       <li Class="VFECore.Abilities.PawnKindAbilityExtension">
         <giveAbilities>
-          <!-- <li>DD_DragonJump</li> -->
+          <li>DD_DragonJump</li>
+          <li>DD_DragonBreath_Fire</li>
+          <li>DD_DragonSpit_Fire</li>
         </giveAbilities>
         <giveRandomAbilities>false</giveRandomAbilities>
       </li>
@@ -690,8 +704,14 @@
       </li>
     </tools>
     <comps>
-      <li Class="AnimalBehaviours.CompProperties_Draftable">
+            <li Class="AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
+      </li>
+      <li Class="VFECore.CompProperties_ShieldBubble">
+        <compClass>VFECore.Abilities.CompAbilities</compClass>
+        <blockRangedAttack>False</blockRangedAttack>
+        <blockMeleeAttack>False</blockMeleeAttack>
+        <showAlways>True</showAlways>
       </li>
 
       <li Class="DD.CompProperties_CrossbredEggLayer">
@@ -885,7 +905,7 @@
       </li>
       <li Class="VFECore.Abilities.PawnKindAbilityExtension">
         <giveAbilities>
-          <!-- <li>DD_DragonJump</li> -->
+          <li>DD_DragonJump</li>
           <li>DD_DragonBreath_Fire</li>
           <li>DD_DragonSpit_Fire</li>
         </giveAbilities>
@@ -1029,8 +1049,14 @@
       <ToxicResistance>0</ToxicResistance>
     </statBases> -->
     <comps>
-      <li Class="AnimalBehaviours.CompProperties_Draftable">
+            <li Class="AnimalBehaviours.CompProperties_Draftable">
         <makeNonFleeingToo>true</makeNonFleeingToo>
+      </li>
+      <li Class="VFECore.CompProperties_ShieldBubble">
+        <compClass>VFECore.Abilities.CompAbilities</compClass>
+        <blockRangedAttack>False</blockRangedAttack>
+        <blockMeleeAttack>False</blockMeleeAttack>
+        <showAlways>True</showAlways>
       </li>
 
       <li Class="DD.CompProperties_CrossbredEggLayer">
@@ -1229,7 +1255,7 @@
       </li>
       <li Class="VFECore.Abilities.PawnKindAbilityExtension">
         <giveAbilities>
-          <!-- <li>DD_DragonJump</li> -->
+          <li>DD_DragonJump</li>
           <li>DD_DragonBreath_Fire</li>
           <li>DD_DragonSpit_Fire</li>
         </giveAbilities>

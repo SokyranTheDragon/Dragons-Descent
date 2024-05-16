@@ -9,7 +9,7 @@ using Verse;
 
 namespace DD
 {
-  /*   public class Ritual_Destroyer : Ritual_WorldTargeting
+    public class Ritual_Destroyer : Ritual_WorldTargeting
     {
         protected bool DefaultDestroy => Def.GetModExtension<RitualWorldObjectModExtension>() is RitualWorldObjectModExtension ext ? ext.defaultDestroy : true;
 
@@ -31,18 +31,18 @@ namespace DD
             Faction faction = target.Faction;
 
             WorldObjectDef replacement = GetReplacementDef(target.def);
-            if(replacement != null || DefaultDestroy)
+            if (replacement != null || DefaultDestroy)
             {
                 //If replacement exists, or if (it doesn't and destroy by default)
-                if(target is MapParent mp && mp.HasMap)
+                if (target is MapParent mp && mp.HasMap)
                 {
                     //All pawns are killed, and map is destroyed.
-                    mp.Map.mapPawns.AllPawnsSpawned.ToList().ForEach(p => p.Kill(null));
-                    Current.Game.DeinitAndRemoveMap(mp.Map);
+                    //mp.Map.mapPawns.AllPawnsSpawned.ToList().ForEach(p => p.Kill(null));
+                    //Current.Game.DeinitAndRemoveMap(mp.Map);
                 }
                 //Destroy world object.
                 target.Destroy();
-                if(replacement != null)
+                if (replacement != null)
                 {
                     //Spawn replacement, if it exists.
                     WorldObject t = WorldObjectMaker.MakeWorldObject(replacement);
@@ -52,5 +52,5 @@ namespace DD
                 }
             }
         }
-    } */
+    }
 }

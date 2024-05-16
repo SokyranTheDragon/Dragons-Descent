@@ -66,15 +66,7 @@
             </li>
           </subNodes>
         </li>
-        <!-- This breaks dragons abilites when manhunter -->
-        <!-- <li Class="ThinkNode_PrioritySorter">
-          <subNodes>
-            <li Class="DD.JobGiver_GetFood_Dragon">
-              <minCategory>Starving</minCategory>
-            </li>
-          </subNodes>
-        </li> -->
-        <!-- React to close melee threat -->
+      
 
         <li Class="JobGiver_ReactToCloseMeleeThreat">
           <maxDistance>2.9</maxDistance>
@@ -240,7 +232,15 @@
         <li Class="ThinkNode_Subtree">
           <treeDef>SatisfyBasicNeeds</treeDef>
         </li>
-
+  <!-- This breaks dragons abilites when manhunter -->
+  <li Class="ThinkNode_PrioritySorter">
+    <subNodes>
+      <li Class="DD.JobGiver_GetFood_Dragon">
+        <minCategory>Starving</minCategory>
+      </li>
+    </subNodes>
+  </li>
+  <!-- React to close melee threat -->
         <!-- Go to bed and lie down for regen -->
         <li Class="DD.ThinkNode_ConditionalMustKeepLyingDownForRegen">
           <subNodes>

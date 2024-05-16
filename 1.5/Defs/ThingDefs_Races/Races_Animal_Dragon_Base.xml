@@ -31,7 +31,7 @@
           <li>MudInEyes</li>
           <li>GravelInEyes</li>
         </hediffsToRemove>
-        <tickInterval>200</tickInterval>
+        <tickInterval>250</tickInterval>
       </li>
 <!-- 
             <li Class="AnimalBehaviours.CompProperties_DigWhenHungry">
@@ -372,12 +372,7 @@
         <scaleIntervalDays>15</scaleIntervalDays>
         <scaleAmount>60</scaleAmount>
       </li>
-      <li Class="VFECore.CompProperties_ShieldBubble">
-        <compClass>VFECore.Abilities.CompAbilities</compClass>
-        <blockRangedAttack>False</blockRangedAttack>
-        <blockMeleeAttack>False</blockMeleeAttack>
-        <showAlways>True</showAlways>
-      </li>
+      
 <!--       <li Class="MVCF.Comps.CompProperties_VerbProps">
         <compClass>MVCF.Comps.Comp_VerbProps</compClass>
         <verbProps>

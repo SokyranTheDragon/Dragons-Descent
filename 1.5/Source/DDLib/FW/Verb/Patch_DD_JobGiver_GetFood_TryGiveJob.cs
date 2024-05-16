@@ -11,7 +11,8 @@ using Verse;
 using Verse.AI;
 
 namespace DD
-{
+{ 
+    //Old code
     //[HarmonyPatch(typeof(JobGiver_GetFood), "TryGiveJob")]
     //public static class DD_JobGiver_GetFood_TryGiveJob
     //{

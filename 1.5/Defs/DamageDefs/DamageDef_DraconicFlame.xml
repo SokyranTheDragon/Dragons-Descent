@@ -3,11 +3,9 @@
 	
 	<!--========== Breath DamageDef ==========-->
 	<!-- Getting damaged with this DamageDef will attempt to apply the effect onto the pawn/thing/ground/whatever -->
-	<DamageDef>
+	<!-- <DamageDef>
 		<defName>DraconicFlame</defName>
-		<!-- <workerClass>DD.DD_DamageWorker_Flame</workerClass> -->
-		<workerClass>DamageWorker_Vaporize</workerClass>
-		<!-- <workerClass>DD.DD_DamageWorker_ApplyDamage</workerClass> -->
+		<workerClass>DD.DD_DamageWorker_Flame</workerClass>
         <label>draconic flame</label>
 		<hasForcefulImpact>false</hasForcefulImpact>
 		<makesBlood>false</makesBlood>
@@ -27,7 +25,34 @@
 		<combatLogRules>Damage_Flame</combatLogRules>
 		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
 		<plantDamageFactor>9</plantDamageFactor>
-	</DamageDef>
+	</DamageDef> -->
+	<DamageDef>
+	<defName>DraconicFlame</defName>
+	<!-- <workerClass>DD.DD_DamageWorker_Flame</workerClass> -->
+	<workerClass>DamageWorker_Flame</workerClass>
+    <label>flame</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has burned to death.</deathMessage>
+    <hediff>Burn</hediff>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>10</defaultDamage>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <scaleDamageToBuildingsBasedOnFlammability>true</scaleDamageToBuildingsBasedOnFlammability>
+	<isExplosive>true</isExplosive>
+	<isRanged>true</isRanged>
+	<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+  </DamageDef>
 
 	<DamageDef>
 		<defName>DraconicExplosion</defName>

@@ -46,6 +46,7 @@
     <Compile Include="Abilities\Charge\Ability_DragonJump.cs" />
     <Compile Include="Abilities\Ability_ShootProjectile_Dragon.cs" />
     <Compile Include="Abilities\Ability_Explode_Fire.cs" />
+    <Compile Include="Abilities\Gainabilities.cs" />
     <Compile Include="Abilities\ProjectileMultiple.cs" />
     <Compile Include="Abilities\Stance\DD_Stance_Stand.cs" />
     <Compile Include="Buildings\Incubation\Graphics\LayeredGraphicData.cs" />
@@ -54,7 +55,10 @@
     <Compile Include="Buildings\Incubation\Graphics\Graphic_IncubatorEgg.cs" />
     <Compile Include="Capacity\DD_MassUtility_Capacity.cs" />
     <Compile Include="Capacity\CarryCapacityExtension.cs" />
+    <Compile Include="Common\Extensions\CompGetGizmosExtraVEabilities.cs" />
     <Compile Include="Common\Extensions\GenusMarkerExtension.cs" />
+    <Compile Include="Common\Extensions\Giveability.cs" />
+    <Compile Include="Common\Extensions\PawnkindAbilityExtension.cs" />
     <Compile Include="DamageWorker\DD_DamageWorker_Flame .cs" />
     <Compile Include="Defs\DD_InternalDefOf.cs" />
     <Compile Include="Defs\GenusDef.cs" />
@@ -106,7 +110,9 @@
     <Compile Include="Effects\Ported\Thing\DraconicPoison.cs" />
     <Compile Include="Effects\Ported\Thing\DraconicWater.cs" />
     <Compile Include="Effects\Ported\Thing\DraconicWind.cs" />
+    <Compile Include="FireUtility\DD_Fire.cs" />
     <Compile Include="FireUtility\DD_FireUtility.cs" />
+    <Compile Include="FireUtility\DD_Fireutilitynew.cs" />
     <Compile Include="FleckEmitter\CompFleckEmitter.cs" />
     <Compile Include="FleckEmitter\CompProperties_FleckEmitter.cs" />
     <Compile Include="FW\Verb\JobGiver_Manhunter_AnyVerb_edited.cs" />
@@ -205,6 +211,7 @@
     <Compile Include="Ritual\Alert\Alert_RitualEffect_MaintainSingle.cs" />
     <Compile Include="Ritual\Alert\Alert_RitualEffect_MaintainMultiple.cs" />
     <Compile Include="Ritual\Alert\Alert_RitualEffect_WardMultiple.cs" />
+    <Compile Include="Ritual\RitualEffects\Effects\Ritual_Addabilities_1.4.cs" />
     <Compile Include="Ritual\RitualEffects\Effects\Ritual_Taming.cs" />
     <Compile Include="Ritual\RitualEffects\Ritual_WorldTargeting.cs" />
     <Compile Include="Ritual\RitualEffects\Ritual_WorldTargetingTicking.cs" />
@@ -232,7 +239,9 @@
     <Compile Include="Ritual\RitualEffects\Effects\Ritual_CalmDownAll.cs" />
     <Compile Include="Ritual\Extensions\RitualTickingModExtension.cs" />
     <Compile Include="Ritual\Gizmos\Command_RitualEffect.cs" />
-    <Compile Include="Ritual\Gizmos\Gizmo_RitualInfo.cs" />
+    <Compile Include="C:\Users\Otter\Desktop\Gizmo_RitualInfo.cs">
+      <Link>Ritual\Gizmos\Gizmo_RitualInfo.cs</Link>
+    </Compile>
     <Compile Include="Ritual\IRituals.cs" />
     <Compile Include="Ritual\RitualEffects\Ritual.cs" />
     <Compile Include="Ritual\RitualEffects\Ritual_Targeting.cs" />
