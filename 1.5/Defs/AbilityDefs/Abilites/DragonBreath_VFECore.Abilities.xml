@@ -16,12 +16,12 @@
         <abilityClass>DD.Ability_ShootProjectile_Multiple_Dragon</abilityClass>
         <!-- <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass> -->
         <targetMode>Pawn</targetMode>
-        <castTime>15</castTime>
+        <castTime>75</castTime>
         <range>26</range>
         <chance>.3</chance>
         <radius>5</radius>
         <!-- <durationTime>50</durationTime> -->
-        <cooldownTime>100</cooldownTime>
+        <cooldownTime>700</cooldownTime>
         <iconPath>AnimalProjectile/DragonFire</iconPath>
         <castSound>DragonBreathShot</castSound>
         <showUndrafted>true</showUndrafted>
@@ -51,7 +51,8 @@
         </targetingParameters>
         <castTime>100</castTime>
         <durationTime>200</durationTime>
-        <cooldownTime>600</cooldownTime>
+        <cooldownTime>1100</cooldownTime>
+        <!-- <cooldownTime>100</cooldownTime> -->
         <minRange>2</minRange>
         <range>35</range>
         <chance>.8</chance>
@@ -78,7 +79,7 @@
           <canTargetMechs>true</canTargetMechs>
         </targetingParameters>
         <castTime>120</castTime>
-        <power>100</power>
+        <power>20</power>
         <range>30</range>
         <cooldownTime>1250</cooldownTime>
         <iconPath>UserInterface/Abilities/Fly</iconPath>

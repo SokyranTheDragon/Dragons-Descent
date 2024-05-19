@@ -205,40 +205,54 @@
 			<!--optional, you can set the opacity via alpha channel -->
 		</graphicData>
 		<projectile>
+			<damageDef>Flame</damageDef>
+			<!-- <explosionRadius>2.9</explosionRadius> -->
 			<!-- <damageDef>DraconicFlame</damageDef> -->
-			<damageDef>DraconicFlame</damageDef>
 			<!-- <damageDef>DraconicExplosion</damageDef> -->
-			<explosionDamageFalloff>true</explosionDamageFalloff>
-			<flyOverhead>true</flyOverhead>
-			<explosionRadius>3</explosionRadius>
+			<explosionDamageFalloff>false</explosionDamageFalloff>
+			<flyOverhead>false</flyOverhead>
+			<explosionRadius>4</explosionRadius>
 			<damageAmountBase>5</damageAmountBase>
 			<stoppingPower>3.5</stoppingPower>
 			<ai_IsIncendiary>true</ai_IsIncendiary>
 			<preExplosionSpawnThingDef>Filth_Ash</preExplosionSpawnThingDef>
 			<preExplosionSpawnChance>.3</preExplosionSpawnChance>
-			<speed>26</speed>
+			<speed>45</speed>
 			<extraDamages>
 				<li>
 				<def>Flame</def>
 				<amount>5</amount>
 				<armorPenetration>1</armorPenetration>
-				<chance>0.3</chance>
+				<chance>0.7</chance>
 			  </li> 
 			</extraDamages>
 		</projectile>
-		<stopWhenHit>false</stopWhenHit>
-		<drawOffscreen>true</drawOffscreen> <!-- needed to draw them properly -->
-		<lifeTimeDuration>90</lifeTimeDuration> <!-- total life time duration, the counter counts every tickFrameRate property -->
-		<widthScaleFactor>0.65</widthScaleFactor> <!-- optional, will scale the width of the projectile textures -->
-		<heightScaleFactor>1</heightScaleFactor> <!-- optional, will scale the heigth of the projectile textures -->
-		<startingPositionOffset>(0, 1, -1)</startingPositionOffset> <!-- if you need to position starting projectile position (for big dragons and flamethrowers etc -->
-		<totalSizeScale>1.0</totalSizeScale> <!-- optional, will scale the size of projectile textures. was needed in order to scale Oskars textures properly to fit them after the shooter -->
-		<tickFrameRate>9</tickFrameRate> <!-- speed of changing textures per ticks -->
-		<finalTickFrameRate>3</finalTickFrameRate> <!-- speed of changing fade out textures per ticks -->
-		<tickDamageRate>1</tickDamageRate> <!-- determines through which each tick the damage is done by the custom class (fire class for example) -->
+		<!-- <drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>100</lifeTimeDuration>
+		<widthScaleFactor>0.75</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1.15</totalSizeScale>
+		<tickFrameRate>2</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
-		<reachMaxRangeAlways>true</reachMaxRangeAlways>
-		<minDistanceToAffect>1</minDistanceToAffect> <!-- can be set to ignore the affected cells nearby (useful if you do not need to burn sandbags or other buildings)-->
+		<minDistanceToAffect>1</minDistanceToAffect> -->
+
+		<stopWhenHit>false</stopWhenHit>
+		<drawOffscreen>true</drawOffscreen> 
+		<lifeTimeDuration>90</lifeTimeDuration> 
+		<widthScaleFactor>0.65</widthScaleFactor> 
+		<heightScaleFactor>1</heightScaleFactor> 
+		<startingPositionOffset>(0, 1, -1)</startingPositionOffset> 
+		<totalSizeScale>1.0</totalSizeScale> 
+		<tickFrameRate>9</tickFrameRate> 
+		<finalTickFrameRate>3</finalTickFrameRate> 
+		<tickDamageRate>1</tickDamageRate> 
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<reachMaxRangeAlways>false</reachMaxRangeAlways>
+		<!-- <reachMaxRangeAlways>true</reachMaxRangeAlways> -->
+		<minDistanceToAffect>1</minDistanceToAffect> 
 	</VFECore.ExpandableProjectileDef>
 
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
