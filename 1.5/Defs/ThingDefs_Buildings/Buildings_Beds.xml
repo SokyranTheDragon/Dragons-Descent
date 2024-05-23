@@ -2,11 +2,14 @@
 <Defs>
 
 	<!--=========================== Dragon Nest ===============================-->
-	<ThingDef ParentName="FurnitureWithQualityBase">
+		<ThingDef ParentName="FurnitureWithQualityBase">
+		<!-- <ThingDef ParentName="StorageShelfBase"> -->
 		<defName>DragonNest</defName>
-		<thingClass>DD.Building_StorageBed</thingClass>
+		<!-- <thingClass>DD.Building_StorageBed</thingClass> -->
+		<!-- <thingClass>Building_Bed</thingClass> -->
+		<thingClass>Building_Storage</thingClass>
 		<label>dragon nest</label>
-		<description>A soft bed of hay for dragons to sleep on. Fit for any dragon egg as it protects it from the elements and increases growth by 10%.</description>
+		<description>A soft bed of hay Fit for any dragon egg as it protects it from the elements and increases growth by 13%.</description>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -18,7 +21,7 @@
 		<uiIconScale>0.80</uiIconScale>
 		<fillPercent>0.15</fillPercent>
 		<pathCost>40</pathCost>
-    <designationCategory>Furniture</designationCategory>
+        <designationCategory>Furniture</designationCategory>
 		<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
 		<costList>
 			<Hay>40</Hay>
@@ -57,11 +60,12 @@
 			</fixedStorageSettings>
 		</building>
 		<comps>
-			<li Class="DD.CompProperties_AssignableToPawn_Body">
+			<!-- <li Class="DD.CompProperties_AssignableToPawn_Body">
 				<bodyDef>QuadrupedeAnimalWithClawsDragon</bodyDef>
 				<drawAssignmentOverlay>false</drawAssignmentOverlay>
 				<compClass>DD.CompAssignableToPawn_Nest</compClass>
-			</li>
+			</li> -->
+			
 			<li Class="DD.CompProperties_EggIncubatorNestBonus">
 				<compClass>DD.CompEggIncubator_Nest</compClass>
 				<!-- <debug>true</debug> -->
@@ -73,7 +77,7 @@
 				<!-- Difference between previous and new value = 5.342998E-06 -->
 				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
 				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
-				<basePercentageDailyProgress>0.1</basePercentageDailyProgress>
+				<basePercentageDailyProgress>0.13</basePercentageDailyProgress>
 				<bonusPercentageDailyProgress>0.5~0.15</bonusPercentageDailyProgress>
 				<factionCheckInterval>
 					<days>0.5</days>
@@ -88,9 +92,11 @@
 	<!--=========================== Dragon Pillow ===============================-->
 	<ThingDef ParentName="FurnitureWithQualityBase">
 		<defName>DragonPillow</defName>
-		<thingClass>DD.Building_StorageBed</thingClass>
+		<!-- <thingClass>DD.Building_StorageBed</thingClass> -->
+		<thingClass>Building_Bed</thingClass>
+		<!-- <thingClass>Building_Storage</thingClass> -->
 		<label>dragon pillow</label>
-		<description>A soft bed for dragons to sleep on. Perfectly fits a dragon and a dragon egg. Grants a 13% growth bonus for dragon eggs.</description>
+		<description>A soft bed for dragons to sleep on.</description>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -105,9 +111,9 @@
 		<costStuffCount>40</costStuffCount>
     <designationCategory>Furniture</designationCategory>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-    <researchPrerequisites>
-      <li>DraconicIncubation</li>
-    </researchPrerequisites>
+	<researchPrerequisites>
+		<li>ComplexFurniture</li>
+	</researchPrerequisites>
 		<inspectorTabs>
 			<li>ITab_Storage</li>
 		</inspectorTabs>
@@ -129,14 +135,14 @@
 			<bed_showSleeperBody>true</bed_showSleeperBody>
 			<bed_healPerDay>3</bed_healPerDay>
 			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-			<fixedStorageSettings>
+			<!-- <fixedStorageSettings>
 				<priority>Important</priority>
 				<filter>
 					<categories>
 						<li>EggsDragon</li>
 					</categories>
 				</filter>
-			</fixedStorageSettings>
+			</fixedStorageSettings> -->
 		</building>
 		<statBases>
 			<MaxHitPoints>400</MaxHitPoints>
@@ -154,17 +160,8 @@
 				<drawAssignmentOverlay>false</drawAssignmentOverlay>
 				<compClass>DD.CompAssignableToPawn_Nest</compClass>
 			</li>
-			<li Class="DD.CompProperties_EggIncubatorNestBonus">
+			<!-- <li Class="DD.CompProperties_EggIncubatorNestBonus">
 				<compClass>DD.CompEggIncubator_Nest</compClass>
-				<!-- <debug>true</debug> -->
-				<!-- Debug tag causes the comp to log messages in the form: -->
-				<!-- <Previous Progress value> -> <New Progress value> | Δ: <Difference between previous and new value> θ: <Estimated number of ticks till progress 100%> ~ <Estimated number of seconds till progress 100%> seconds -->
-				<!-- E.g: 0.009161062 -> 0.009166405 | Δ: 5.342998E-06 θ: 185446.3 ~ 3090.767 seconds -->
-				<!-- Previous Progress value = 0.009161062 -->
-				<!-- New Progress value = 0.009166405 -->
-				<!-- Difference between previous and new value = 5.342998E-06 -->
-				<!-- Estimated number of ticks till progress 100% = 185446.3 -->
-				<!-- Estimated number of seconds till progress 100% = 3090.767 -->
 				<basePercentageDailyProgress>0.13</basePercentageDailyProgress>
 				<bonusPercentageDailyProgress>0.15~0.25</bonusPercentageDailyProgress>
 				<factionCheckInterval>
@@ -173,7 +170,7 @@
 				<factionChangeInterval>
 					<days>2.5</days>
 				</factionChangeInterval>
-			</li>
+			</li> -->
 		</comps>
 	</ThingDef>
 

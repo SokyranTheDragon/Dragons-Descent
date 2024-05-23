@@ -18,6 +18,7 @@ namespace DD
         public static ThingDef DD_Mote_IncineratorBurst_Fire;
         public static ThingDef DraconicFlame;
         public static ThingDef DraconicExplosion;
+        [MayRequireAnomaly]
         public static ThingDef DD_IncineratorSpray_Dragon;
         public static ThingDef DD_DragonJumpFlyer;
 
