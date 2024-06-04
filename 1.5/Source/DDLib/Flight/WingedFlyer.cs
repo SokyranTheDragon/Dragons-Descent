@@ -89,11 +89,11 @@ namespace DD
 
                     if (Variants != null)
                     {
-                        graphic = Variants.Where(variant => variant.variantPath == InnerPawn.Drawer.renderer.graphics.nakedGraphic.path).Select(variant => variant.variantData.GetGraphic(DefaultGraphicData.Graphic)).FirstOrFallback();
+                        graphic = Variants.Where(variant => variant.variantPath == InnerPawn.Drawer.renderer.BodyGraphic.path).Select(variant => variant.variantData.GetGraphic(DefaultGraphicData.Graphic)).FirstOrFallback();
 
                         if (graphic == null)
                         {
-                            Log.Warning("Unable to find flying variant for [" + InnerPawn.Drawer.renderer.graphics.nakedGraphic.path + "]");
+                            Log.Warning("Unable to find flying variant for [" + InnerPawn.Drawer.renderer.BodyGraphic.path + "]");
                             graphic = data.GraphicColoredFor(InnerPawn);
                         }
                     }
@@ -116,7 +116,7 @@ namespace DD
             }
         }
 
-        public override void DrawAt(Vector3 drawLoc, bool flip = false)
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (InnerPawn != null)
             {
@@ -200,7 +200,7 @@ namespace DD
             //Rotation = Rot4.FromAngleFlat(Position.AngleFlat - dest.AngleFlat);
         }
 
-        public static WingedFlyer MakeFlyer(Pawn pawn, TargetInfo dest)
+        public static WingedFlyer MakeFlyer(Pawn pawn, TargetInfo dest, ThingDef flyerDef)
         {
             if (!pawn.def.HasModExtension<WingedFlyerExtension>())
             {
@@ -216,8 +216,10 @@ namespace DD
 
             IntVec3 pos = pawn.Position;
             Map map = pawn.Map;
+            // Check if the pawn was selected before flying
+            bool isSelected = Find.Selector.IsSelected(pawn);
 
-            WingedFlyer flyer = (WingedFlyer)ThingMaker.MakeThing(DD_ThingDefOf.WingedFlyer);
+            WingedFlyer flyer = (WingedFlyer)ThingMaker.MakeThing(flyerDef);
 
             flyer.start = pos;
             flyer.dest = dest.Cell;
@@ -227,6 +229,9 @@ namespace DD
             if (affectedPawns.All(p => flyer.container.TryAddOrTransfer(p)))
             {
                 GenSpawn.Spawn(flyer, pos, map);
+                // Re-select the pawn after creating the flyer, matching vanilla behavior
+                if (isSelected)
+                    Find.Selector.Select(pawn);
 
                 return flyer;
             }

@@ -42,7 +42,7 @@
 	 <ThingDef>
 		<defName>WingedFlyer</defName>
 		<label>dragon in flight</label>
-		<thingClass>VFECore.Abilities.AbilityPawnFlyer</thingClass>
+		<thingClass>DD.WingedFlyer</thingClass>
 		<category>Ethereal</category>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Weather</altitudeLayer>

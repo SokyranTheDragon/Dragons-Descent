@@ -14,7 +14,7 @@ namespace DD
     {
         public AbilityCompProperties_RequireBodyPart VProps => props as AbilityCompProperties_RequireBodyPart;
 
-        private static IEnumerable<BodyPartRecord> CollectRecords(BodyPartRecord record, BodyPartDef part, List<BodyPartRecord> records = null)
+        public static IEnumerable<BodyPartRecord> CollectRecords(BodyPartRecord record, BodyPartDef part, List<BodyPartRecord> records = null)
         {
             if (records == null)
             {

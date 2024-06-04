@@ -134,7 +134,7 @@
       </wildBiomes>
     </race>
     <modExtensions>
-      <!-- <li Class="DD.WingedFlyerExtension">
+      <li Class="DD.WingedFlyerExtension">
         <flightSpeed>14</flightSpeed>
         <flyingGraphicData Class="DD.AnimationGraphicData">
           <texPath>Things/Pawn/Animal/Flight</texPath>
@@ -166,7 +166,7 @@
             </variantData>
           </li>
         </variants>
-      </li> -->
+      </li>
       <li Class="DD.CarryCapacityExtension">
         <constant>360</constant>
         <offset>100</offset>
@@ -301,6 +301,7 @@
           <li>DD_DragonJump</li>
           <li>DD_DragonBreath_Fire</li>
           <li>DD_DragonSpit_Fire</li>
+          <li>DD_DraconicFlight</li>
         </giveAbilities>
         <giveRandomAbilities>false</giveRandomAbilities>
       </li>
@@ -440,7 +441,7 @@
       </wildBiomes>
     </race>
     <modExtensions>
-      <!-- <li Class="DD.WingedFlyerExtension">
+      <li Class="DD.WingedFlyerExtension">
         <flightSpeed>14</flightSpeed>
         <flyingGraphicData Class="DD.AnimationGraphicData">
           <texPath>Things/Pawn/Animal/Flight</texPath>
@@ -472,7 +473,7 @@
             </variantData>
           </li>
         </variants>
-      </li> -->
+      </li>
       <li Class="DD.CarryCapacityExtension">
         <constant>360</constant>
         <offset>100</offset>
@@ -607,6 +608,7 @@
           <li>DD_DragonJump</li>
           <li>DD_DragonBreath_Fire</li>
           <li>DD_DragonSpit_Fire</li>
+          <li>DD_DraconicFlight</li>
         </giveAbilities>
         <giveRandomAbilities>false</giveRandomAbilities>
       </li>
@@ -741,7 +743,7 @@
       </wildBiomes>
     </race>
     <modExtensions>
-      <!-- <li Class="DD.WingedFlyerExtension">
+      <li Class="DD.WingedFlyerExtension">
         <flightSpeed>14</flightSpeed>
         <flyingGraphicData Class="DD.AnimationGraphicData">
           <texPath>Things/Pawn/Animal/Flight</texPath>
@@ -773,7 +775,7 @@
             </variantData>
           </li>
         </variants>
-      </li> -->
+      </li>
       <li Class="DD.CarryCapacityExtension">
         <constant>360</constant>
         <offset>100</offset>
@@ -908,6 +910,7 @@
           <li>DD_DragonJump</li>
           <li>DD_DragonBreath_Fire</li>
           <li>DD_DragonSpit_Fire</li>
+          <li>DD_DraconicFlight</li>
         </giveAbilities>
         <giveRandomAbilities>false</giveRandomAbilities>
       </li>
@@ -1091,7 +1094,7 @@
       </wildBiomes>
     </race>
     <modExtensions>
-      <!-- <li Class="DD.WingedFlyerExtension">
+      <li Class="DD.WingedFlyerExtension">
         <flightSpeed>14</flightSpeed>
         <flyingGraphicData Class="DD.AnimationGraphicData">
           <texPath>Things/Pawn/Animal/Flight</texPath>
@@ -1123,7 +1126,7 @@
             </variantData>
           </li>
         </variants>
-      </li> -->
+      </li>
       <li Class="DD.CarryCapacityExtension">
         <constant>360</constant>
         <offset>100</offset>
@@ -1258,6 +1261,7 @@
           <li>DD_DragonJump</li>
           <li>DD_DragonBreath_Fire</li>
           <li>DD_DragonSpit_Fire</li>
+          <li>DD_DraconicFlight</li>
         </giveAbilities>
         <giveRandomAbilities>false</giveRandomAbilities>
       </li>

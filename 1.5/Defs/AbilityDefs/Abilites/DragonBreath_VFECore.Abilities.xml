@@ -224,4 +224,45 @@
         </modExtensions>
       </VFECore.Abilities.AbilityDef> -->
 
+
+    <VFECore.Abilities.AbilityDef>
+        <defName>DD_DraconicFlight</defName>
+        <label>winged flight</label>
+        <description>Jet goes up, Icarus comes down.</description>
+        <abilityClass>DD.Ability_WingedFlyer</abilityClass>
+        <targetMode>Location</targetMode>
+        <targetingParameters>
+            <canTargetPawns>true</canTargetPawns>
+            <canTargetLocations>true</canTargetLocations>
+        </targetingParameters>
+        <iconPath>UserInterface/Abilities/Fly</iconPath>
+        <cooldownTime>5200</cooldownTime>
+        <castTime>60</castTime>
+        <!-- 40 doesn't allow targeting all highlighted tiles, so a slightly bigger value is needed. -->
+        <range>40.01</range>
+        <showUndrafted>true</showUndrafted>
+        <requireLineOfSight>false</requireLineOfSight>
+
+        <modExtensions>
+            <!-- Require wings to use, just like it worked previously. -->
+            <li Class="DD.RequireBodyPartExtension">
+                <missing>true</missing>
+                <bodyPart>Wing</bodyPart>
+            </li>
+            <li Class="DD.WingedFlyerAbilityExtension">
+                <!-- Currently DD will automatically use WingedFlyer, but a custom flyer will be needed if made standalone. -->
+                <flyerDef>WingedFlyer</flyerDef>
+                <!-- Defaults to false, if true will skip the check for roof. -->
+                <ignoreRoofCheck>false</ignoreRoofCheck>
+                <!-- If present, this is the messages that will be displayed when trying to fly while under a roof/targeting a tile under a roof. -->
+                <!-- If not set/left empty only a sound will be played. -->
+                <underRoofStartKey>Ability_CannotStartFlyingUnderRoof</underRoofStartKey>
+                <underRoofEndKey>Ability_CannotEndFlyingUnderRoof</underRoofEndKey>
+            </li>
+            <!-- Prevent use of the ability while forming caravan, just like it worked in the past. -->
+            <!-- disableMessageKey will default to Ability_CannotUseWhileFormingCaravan -->
+            <li Class="DD.CannotUseWhileFormingCaravanExtension" />
+        </modExtensions>
+    </VFECore.Abilities.AbilityDef>
+
 </Defs>
