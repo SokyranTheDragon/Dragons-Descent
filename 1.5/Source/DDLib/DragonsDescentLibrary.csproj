@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Abilities\Ability_ShootProjectile_Multiple_Dragon.cs" />
+    <Compile Include="Abilities\Ability_WingedFlyer.cs" />
+    <Compile Include="Abilities\CannotUseWhileFormingCaravanExtension.cs" />
     <Compile Include="Abilities\Charge\AbilityStraightPawnFlyer.cs" />
     <Compile Include="Abilities\CompAbilityEffect_Burner_DragonFire.cs" />
     <Compile Include="Abilities\CompAbilityEffect_Burner_DragonNecro.cs" />
@@ -48,6 +50,7 @@
     <Compile Include="Abilities\Ability_Explode_Fire.cs" />
     <Compile Include="Abilities\Gainabilities.cs" />
     <Compile Include="Abilities\ProjectileMultiple.cs" />
+    <Compile Include="Abilities\RequireBodyPartExtension.cs" />
     <Compile Include="Abilities\Stance\DD_Stance_Stand.cs" />
     <Compile Include="Buildings\Incubation\Graphics\LayeredGraphicData.cs" />
     <Compile Include="Buildings\Incubation\Graphics\Graphic_Multi_Layered.cs" />
@@ -340,6 +343,8 @@
     <Compile Include="FW\Verb\Verb_Shoot_Limited.cs" />
     <Compile Include="UI\UI.cs" />
     <Compile Include="Verb\IncineratorSpray_Dragon.cs" />
+    <Compile Include="Flight\WingedFlyer.cs" />
+    <Compile Include="Flight\WingedFlyerExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
