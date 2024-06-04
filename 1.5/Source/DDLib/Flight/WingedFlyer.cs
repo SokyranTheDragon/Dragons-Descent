@@ -19,6 +19,7 @@ namespace DD
         private ThingOwner<Pawn> container;
         public IntVec3 start, dest;
         public int ticks, ticksTotal;
+        private bool wasDrafted;
 
         private Graphic graphic;
 
@@ -171,6 +172,9 @@ namespace DD
             container.Clear();
             GenSpawn.Spawn(pawn, Position, Map);
             pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+
+            if (wasDrafted && pawn.drafter != null)
+                pawn.drafter.Drafted = true;
         }
 
         public virtual void Drop()
@@ -223,6 +227,7 @@ namespace DD
 
             flyer.start = pos;
             flyer.dest = dest.Cell;
+            flyer.wasDrafted = pawn.Drafted;
 
             List<Pawn> affectedPawns = TryCollectRelatedPawns(pawn, new List<Pawn>());
             affectedPawns.ForEach(p => p.DeSpawn());
@@ -306,6 +311,7 @@ namespace DD
             Scribe_Values.Look(ref dest, "endPoint");
             Scribe_Values.Look(ref ticks, "currentTick", 0);
             Scribe_Values.Look(ref ticksTotal, "lengthTicks", 0);
+            Scribe_Values.Look(ref wasDrafted, "wasDrafted");
         }
     }
 }
